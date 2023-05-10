@@ -1,6 +1,6 @@
 
 linux:
-	cc -O3 -std=gnu11 -fPIC -Wall -shared -o libtreesitter.so libtreesitter.c -llua -ltree-sitter
+	cc -O3 -std=gnu11 -fPIC -Wall -shared -o libtreesitter.so libtreesitter.c -llua -ltree-sitter /usr/local/lib/libtree-sitter-json.a
 
 macos:
 
