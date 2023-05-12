@@ -11,58 +11,100 @@
 #include <tree_sitter/api.h>
 #include <tree_sitter/json.h>
 
-int l_parse(lua_State *L)
+
+int l_with_parser_do(lua_State *L)
 {
-
-    const char *source_code = lua_tostring(L, 1);
-
-    // Create a parser.
     TSParser *parser = ts_parser_new();
 
-    // Set the parser's language (JSON in this case).
-    ts_parser_set_language(parser, tree_sitter_json());
+    lua_pushlightuserdata(L, parser);
 
-    // Build a syntax tree based on source code stored in a string.
+    int retcode = lua_pcall(L, 1, LUA_MULTRET, 0); // assume we have the function as the unique argument.
+
+    ts_parser_delete(parser);
+
+    lua_pushboolean(L, retcode == LUA_OK);
+
+    int n = lua_gettop(L);
+
+    lua_rotate(L, -n, 1);
+
+    return n;
+}
+
+int l_parser_set_language(lua_State *L)
+{
+    TSParser *parser = (TSParser *)lua_touserdata(L, 1);
+    const char *language = lua_tostring(L, 2);
+
+    bool set = false;
+
+    if (strcmp(language, "json") == 0)
+    {
+        ts_parser_set_language(parser, tree_sitter_json());
+        set = true;
+    }
+
+    lua_pushboolean(L, set);
+
+    return 1;
+}
+
+int l_with_parsed_tree_do(lua_State *L)
+{
+    TSParser *parser = (TSParser *)lua_touserdata(L, 1);
+    const char *source_code = lua_tostring(L, 2);
+
     TSTree *tree = ts_parser_parse_string(
         parser,
         NULL,
         source_code,
         strlen(source_code));
 
-    // Get the root node of the syntax tree.
+    lua_pushlightuserdata(L, tree);
+
+    int retcode = lua_pcall(L, 1, LUA_MULTRET, 0);
+
+    ts_tree_delete(tree);
+
+    lua_pushboolean(L, retcode == LUA_OK);
+
+    int n = lua_gettop(L) - 2;
+
+    lua_rotate(L, -n, 1);
+
+    return n;
+}
+
+int l_tree_root_node(lua_State *L)
+{
+    TSTree *tree = (TSTree *)lua_touserdata(L, 1);
+
     TSNode root_node = ts_tree_root_node(tree);
 
-    // Get some child nodes.
-    // TSNode array_node = ts_node_named_child(root_node, 0);
-    // TSNode number_node = ts_node_named_child(array_node, 0);
+    lua_pushlightuserdata(L, &root_node);
 
-    // Check that the nodes have the expected types.
-    // assert(strcmp(ts_node_type(root_node), "document") == 0);
-    // assert(strcmp(ts_node_type(array_node), "array") == 0);
-    // assert(strcmp(ts_node_type(number_node), "number") == 0);
+    return 1;
+}
 
-    // Check that the nodes have the expected child counts.
-    // assert(ts_node_child_count(root_node) == 1);
-    // assert(ts_node_child_count(array_node) == 5);
-    // assert(ts_node_named_child_count(array_node) == 2);
-    // assert(ts_node_child_count(number_node) == 0);
+int l_ts_node_string(lua_State *L)
+{
+    TSNode *root_node = (TSNode *)lua_touserdata(L, 1);
 
-    // Print the syntax tree as an S-expression.
-    char *string = ts_node_string(root_node);
+    char *str = ts_node_string(*root_node);
 
-    lua_pushstring(L, string);
+    lua_pushstring(L, str);
 
-    // Free all of the heap-allocated memory.
-    free(string);
-    ts_tree_delete(tree);
-    ts_parser_delete(parser);
+    free(str);
 
     return 1;
 }
 
 static const struct luaL_Reg libtreesitter[] = {
-    {"parse", l_parse},
-
+    {"with_parser_do", l_with_parser_do},
+    {"parser_set_language", l_parser_set_language},
+    {"with_parsed_tree_do", l_with_parsed_tree_do},
+    {"tree_root_node", l_tree_root_node},
+    {"node_string", l_ts_node_string},
     {NULL, NULL} /* sentinel */
 };
 
