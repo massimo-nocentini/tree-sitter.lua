@@ -1,4 +1,6 @@
 
+
+local lu = require 'luaunit'
 local lambda = require 'operator'
 local treesitter = require 'tree-sitter'
 
@@ -425,12 +427,22 @@ local json = [[
 
 ]]
 
+local function P (tbl)
+
+    for k, v in pairs (tbl) do 
+        if type (v) == 'table' then print (k); P (v)
+        else print (k, v) end
+    end
+
+    print '------------------'
+end
+
 local flag, one = treesitter.with_parser_do (
     function (parser)
         local set = treesitter.parser_set_language (parser, 'json')
         assert (set, 'Cannot set the json language')
 
-        local f, o = treesitter.with_parsed_tree_do (
+        local f, o = treesitter.with_tree_do (
             parser,
             json,
             function (tree)
@@ -447,12 +459,37 @@ assert (flag)
 
 print ( one)
 
-local f = lambda.memoize (function ()
-    print 'called'
-    return 1, 2
-end
-)
+json = [[
 
-print (f ())
-print (f ())
-print (f ())
+    { "hello": [ "world" ]}
+
+]]
+
+local flag, ast = treesitter.with_parser_do (
+    function (parser)
+        local set = treesitter.parser_set_language (parser, 'json')
+        assert (set, 'Cannot set the json language')
+
+        local f, ast = treesitter.with_tree_do (
+            parser,
+            json,
+            treesitter.ast
+        )
+        assert (f)
+
+        return ast
+    end
+)
+assert (flag)
+
+
+Test_constants = {}
+
+function Test_constants:test_gr ()
+	
+	lu.assertEquals(ast, 1)
+end
+
+--------------------------------------------------------------------------------
+
+os.exit( lu.LuaUnit.run() )

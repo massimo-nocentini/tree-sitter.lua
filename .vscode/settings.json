@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "api.h": "c",
-        "json.h": "c"
+        "json.h": "c",
+        "typeinfo": "c"
     }
 }
