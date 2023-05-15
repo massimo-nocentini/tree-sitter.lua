@@ -11,7 +11,7 @@
 #include <tree_sitter/api.h>
 #include <tree_sitter/json.h>
 
-void walk(lua_State *L, TSNode node, int node_pos, const char *field_name)
+void walk(lua_State *L, const TSLanguage *lang, TSNode node, int node_pos, const char *field_name)
 {
     lua_newtable(L);
 
@@ -40,6 +40,10 @@ void walk(lua_State *L, TSNode node, int node_pos, const char *field_name)
 
     lua_pushinteger(L, symbol_id);
     lua_setfield(L, -2, "symbol_id");
+
+    const char *symbol_name = ts_language_symbol_name(lang, symbol_id);
+    lua_pushstring(L, symbol_name);
+    lua_setfield(L, -2, "symbol_name");
 
     lua_newtable(L);
 
@@ -91,7 +95,7 @@ void walk(lua_State *L, TSNode node, int node_pos, const char *field_name)
 
         const char *name = ts_node_field_name_for_child(node, i);
 
-        walk(L, child, i, name);
+        walk(L, lang, child, i, name);
 
         lua_seti(L, -2, i + 1);
     }
@@ -106,12 +110,61 @@ void walk(lua_State *L, TSNode node, int node_pos, const char *field_name)
     // {
     //     TSNode child = ts_node_named_child(node, i);
 
-    //     walk(L, child, i, NULL);
+    //     walk(L, lang, child, i, NULL);
 
     //     lua_seti(L, -2, i + 1);
     // }
 
     // lua_setfield(L, -2, "named_children");
+}
+
+int l_language_symbols(lua_State *L)
+{
+    TSLanguage *lang = (TSLanguage *)lua_touserdata(L, 1);
+
+    uint32_t c = ts_language_symbol_count(lang);
+
+    lua_newtable(L);
+
+    for (int i = 0; i < c; i++)
+    {
+        const char *name = ts_language_symbol_name(lang, i);
+        TSSymbolType t = ts_language_symbol_type(lang, i);
+
+        lua_newtable(L);
+
+        lua_pushstring(L, name);
+        lua_setfield(L, -2, "name");
+
+        if (t == TSSymbolTypeRegular)
+        {
+            lua_pushstring(L, "regular");
+        }
+        else if (t == TSSymbolTypeAnonymous)
+        {
+            lua_pushstring(L, "anonymous");
+        }
+        else
+        {
+            lua_pushstring(L, "auxiliary");
+        }
+        lua_setfield(L, -2, "type");
+
+        lua_seti(L, -2, i + 1);
+    }
+
+    return 1;
+}
+
+int l_tree_language(lua_State *L)
+{
+    TSTree *tree = (TSTree *)lua_touserdata(L, 1);
+
+    const TSLanguage *lang = ts_tree_language(tree);
+
+    lua_pushlightuserdata(L, (void *)lang);
+
+    return 1;
 }
 
 int l_ast(lua_State *L)
@@ -120,7 +173,9 @@ int l_ast(lua_State *L)
 
     TSNode root_node = ts_tree_root_node(tree);
 
-    walk(L, root_node, 0, "");
+    const TSLanguage *lang = ts_tree_language(tree);
+
+    walk(L, lang, root_node, 0, "");
 
     return 1;
 }
@@ -149,15 +204,19 @@ int l_parser_set_language(lua_State *L)
     TSParser *parser = (TSParser *)lua_touserdata(L, 1);
     const char *language = lua_tostring(L, 2);
 
-    bool set = false;
+    TSLanguage *lang = NULL;
 
     if (strcmp(language, "json") == 0)
     {
-        ts_parser_set_language(parser, tree_sitter_json());
-        set = true;
+        lang = tree_sitter_json();
     }
 
-    lua_pushboolean(L, set);
+    if (lang != NULL)
+    {
+        ts_parser_set_language(parser, lang);
+    }
+
+    lua_pushboolean(L, lang != NULL);
 
     return 1;
 }
@@ -219,6 +278,8 @@ static const struct luaL_Reg libtreesitter[] = {
     {"tree_root_node", l_tree_root_node},
     {"node_string", l_ts_node_string},
     {"ast", l_ast},
+    {"tree_language", l_tree_language},
+    {"language_symbols", l_language_symbols},
     {NULL, NULL} /* sentinel */
 };
 

@@ -1,274 +1,9 @@
 (document (object (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))))))))))
-FF
+F
 Failed tests:
 -------------
 1) Test_constants.test_gr
-test.lua:511: expected: 1, actual: {
-    children={
-        {
-            children={
-                {
-                    children={},
-                    end_point={column=5, row=1},
-                    has_error=false,
-                    is_extra=false,
-                    is_missing=false,
-                    is_named=false,
-                    is_null=false,
-                    parent_pointer=userdata: 0x7ffd74c5d580,
-                    self_pointer=userdata: 0x7ffd74c5d610,
-                    sibling_index=0,
-                    start_point={column=4, row=1},
-                    symbol_id=1,
-                    symbol_name="{",
-                    type="{"
-                },
-                {
-                    children={
-                        {
-                            children={
-                                {
-                                    children={},
-                                    end_point={column=7, row=1},
-                                    has_error=false,
-                                    is_extra=false,
-                                    is_missing=false,
-                                    is_named=false,
-                                    is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
-                                    sibling_index=0,
-                                    start_point={column=6, row=1},
-                                    symbol_id=7,
-                                    symbol_name='"',
-                                    type='"'
-                                },
-                                {
-                                    children={},
-                                    end_point={column=12, row=1},
-                                    has_error=false,
-                                    is_extra=false,
-                                    is_missing=false,
-                                    is_named=true,
-                                    is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
-                                    sibling_index=1,
-                                    start_point={column=7, row=1},
-                                    symbol_id=21,
-                                    symbol_name="string_content",
-                                    type="string_content"
-                                },
-                                {
-                                    children={},
-                                    end_point={column=13, row=1},
-                                    has_error=false,
-                                    is_extra=false,
-                                    is_missing=false,
-                                    is_named=false,
-                                    is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
-                                    sibling_index=2,
-                                    start_point={column=12, row=1},
-                                    symbol_id=7,
-                                    symbol_name='"',
-                                    type='"'
-                                }
-                            },
-                            end_point={column=13, row=1},
-                            field_name="key",
-                            has_error=false,
-                            is_extra=false,
-                            is_missing=false,
-                            is_named=true,
-                            is_null=false,
-                            parent_pointer=userdata: 0x7ffd74c5d4b0,
-                            self_pointer=userdata: 0x7ffd74c5d540,
-                            sibling_index=0,
-                            start_point={column=6, row=1},
-                            symbol_id=20,
-                            symbol_name="string",
-                            type="string"
-                        },
-                        {
-                            children={},
-                            end_point={column=14, row=1},
-                            has_error=false,
-                            is_extra=false,
-                            is_missing=false,
-                            is_named=false,
-                            is_null=false,
-                            parent_pointer=userdata: 0x7ffd74c5d4b0,
-                            self_pointer=userdata: 0x7ffd74c5d540,
-                            sibling_index=1,
-                            start_point={column=13, row=1},
-                            symbol_id=4,
-                            symbol_name=":",
-                            type=":"
-                        },
-                        {
-                            children={
-                                {
-                                    children={},
-                                    end_point={column=16, row=1},
-                                    has_error=false,
-                                    is_extra=false,
-                                    is_missing=false,
-                                    is_named=false,
-                                    is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
-                                    sibling_index=0,
-                                    start_point={column=15, row=1},
-                                    symbol_id=5,
-                                    symbol_name="[",
-                                    type="["
-                                },
-                                {
-                                    children={
-                                        {
-                                            children={},
-                                            end_point={column=18, row=1},
-                                            has_error=false,
-                                            is_extra=false,
-                                            is_missing=false,
-                                            is_named=false,
-                                            is_null=false,
-                                            parent_pointer=userdata: 0x7ffd74c5d310,
-                                            self_pointer=userdata: 0x7ffd74c5d3a0,
-                                            sibling_index=0,
-                                            start_point={column=17, row=1},
-                                            symbol_id=7,
-                                            symbol_name='"',
-                                            type='"'
-                                        },
-                                        {
-                                            children={},
-                                            end_point={column=23, row=1},
-                                            has_error=false,
-                                            is_extra=false,
-                                            is_missing=false,
-                                            is_named=true,
-                                            is_null=false,
-                                            parent_pointer=userdata: 0x7ffd74c5d310,
-                                            self_pointer=userdata: 0x7ffd74c5d3a0,
-                                            sibling_index=1,
-                                            start_point={column=18, row=1},
-                                            symbol_id=21,
-                                            symbol_name="string_content",
-                                            type="string_content"
-                                        },
-                                        {
-                                            children={},
-                                            end_point={column=24, row=1},
-                                            has_error=false,
-                                            is_extra=false,
-                                            is_missing=false,
-                                            is_named=false,
-                                            is_null=false,
-                                            parent_pointer=userdata: 0x7ffd74c5d310,
-                                            self_pointer=userdata: 0x7ffd74c5d3a0,
-                                            sibling_index=2,
-                                            start_point={column=23, row=1},
-                                            symbol_id=7,
-                                            symbol_name='"',
-                                            type='"'
-                                        }
-                                    },
-                                    end_point={column=24, row=1},
-                                    has_error=false,
-                                    is_extra=false,
-                                    is_missing=false,
-                                    is_named=true,
-                                    is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
-                                    sibling_index=1,
-                                    start_point={column=17, row=1},
-                                    symbol_id=20,
-                                    symbol_name="string",
-                                    type="string"
-                                },
-                                {
-                                    children={},
-                                    end_point={column=26, row=1},
-                                    has_error=false,
-                                    is_extra=false,
-                                    is_missing=false,
-                                    is_named=false,
-                                    is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
-                                    sibling_index=2,
-                                    start_point={column=25, row=1},
-                                    symbol_id=6,
-                                    symbol_name="]",
-                                    type="]"
-                                }
-                            },
-                            end_point={column=26, row=1},
-                            field_name="value",
-                            has_error=false,
-                            is_extra=false,
-                            is_missing=false,
-                            is_named=true,
-                            is_null=false,
-                            parent_pointer=userdata: 0x7ffd74c5d4b0,
-                            self_pointer=userdata: 0x7ffd74c5d540,
-                            sibling_index=2,
-                            start_point={column=15, row=1},
-                            symbol_id=19,
-                            symbol_name="array",
-                            type="array"
-                        }
-                    },
-                    end_point={column=26, row=1},
-                    has_error=false,
-                    is_extra=false,
-                    is_missing=false,
-                    is_named=true,
-                    is_null=false,
-                    parent_pointer=userdata: 0x7ffd74c5d580,
-                    self_pointer=userdata: 0x7ffd74c5d610,
-                    sibling_index=1,
-                    start_point={column=6, row=1},
-                    symbol_id=18,
-                    symbol_name="pair",
-                    type="pair"
-                },
-                {
-                    children={},
-                    end_point={column=27, row=1},
-                    has_error=false,
-                    is_extra=false,
-                    is_missing=false,
-                    is_named=false,
-                    is_null=false,
-                    parent_pointer=userdata: 0x7ffd74c5d580,
-                    self_pointer=userdata: 0x7ffd74c5d610,
-                    sibling_index=2,
-                    start_point={column=26, row=1},
-                    symbol_id=3,
-                    symbol_name="}",
-                    type="}"
-                }
-            },
-            end_point={column=27, row=1},
-            has_error=false,
-            is_extra=false,
-            is_missing=false,
-            is_named=true,
-            is_null=false,
-            parent_pointer=userdata: 0x7ffd74c5d650,
-            self_pointer=userdata: 0x7ffd74c5d6e0,
-            sibling_index=0,
-            start_point={column=4, row=1},
-            symbol_id=17,
-            symbol_name="object",
-            type="object"
-        }
-    },
+test.lua:490: expected: 1, actual: {
     end_point={column=0, row=3},
     field_name="",
     has_error=false,
@@ -276,8 +11,127 @@ test.lua:511: expected: 1, actual: {
     is_missing=false,
     is_named=true,
     is_null=false,
-    parent_pointer=userdata: 0x7ffd74c5d720,
-    self_pointer=userdata: 0x7ffd74c5d7b0,
+    named_children={
+        {
+            end_point={column=27, row=1},
+            has_error=false,
+            is_extra=false,
+            is_missing=false,
+            is_named=true,
+            is_null=false,
+            named_children={
+                {
+                    end_point={column=26, row=1},
+                    has_error=false,
+                    is_extra=false,
+                    is_missing=false,
+                    is_named=true,
+                    is_null=false,
+                    named_children={
+                        {
+                            end_point={column=13, row=1},
+                            has_error=false,
+                            is_extra=false,
+                            is_missing=false,
+                            is_named=true,
+                            is_null=false,
+                            named_children={
+                                {
+                                    end_point={column=12, row=1},
+                                    has_error=false,
+                                    is_extra=false,
+                                    is_missing=false,
+                                    is_named=true,
+                                    is_null=false,
+                                    named_children={},
+                                    parent_pointer=userdata: 0x7fffa2ee23f0,
+                                    self_pointer=userdata: 0x7fffa2ee2480,
+                                    sibling_index=0,
+                                    start_point={column=7, row=1},
+                                    symbol_id=21,
+                                    symbol_name="string_content",
+                                    type="string_content"
+                                }
+                            },
+                            parent_pointer=userdata: 0x7fffa2ee24c0,
+                            self_pointer=userdata: 0x7fffa2ee2550,
+                            sibling_index=0,
+                            start_point={column=6, row=1},
+                            symbol_id=20,
+                            symbol_name="string",
+                            type="string"
+                        },
+                        {
+                            end_point={column=26, row=1},
+                            has_error=false,
+                            is_extra=false,
+                            is_missing=false,
+                            is_named=true,
+                            is_null=false,
+                            named_children={
+                                {
+                                    end_point={column=24, row=1},
+                                    has_error=false,
+                                    is_extra=false,
+                                    is_missing=false,
+                                    is_named=true,
+                                    is_null=false,
+                                    named_children={
+                                        {
+                                            end_point={column=23, row=1},
+                                            has_error=false,
+                                            is_extra=false,
+                                            is_missing=false,
+                                            is_named=true,
+                                            is_null=false,
+                                            named_children={},
+                                            parent_pointer=userdata: 0x7fffa2ee2320,
+                                            self_pointer=userdata: 0x7fffa2ee23b0,
+                                            sibling_index=0,
+                                            start_point={column=18, row=1},
+                                            symbol_id=21,
+                                            symbol_name="string_content",
+                                            type="string_content"
+                                        }
+                                    },
+                                    parent_pointer=userdata: 0x7fffa2ee23f0,
+                                    self_pointer=userdata: 0x7fffa2ee2480,
+                                    sibling_index=0,
+                                    start_point={column=17, row=1},
+                                    symbol_id=20,
+                                    symbol_name="string",
+                                    type="string"
+                                }
+                            },
+                            parent_pointer=userdata: 0x7fffa2ee24c0,
+                            self_pointer=userdata: 0x7fffa2ee2550,
+                            sibling_index=1,
+                            start_point={column=15, row=1},
+                            symbol_id=19,
+                            symbol_name="array",
+                            type="array"
+                        }
+                    },
+                    parent_pointer=userdata: 0x7fffa2ee2590,
+                    self_pointer=userdata: 0x7fffa2ee2620,
+                    sibling_index=0,
+                    start_point={column=6, row=1},
+                    symbol_id=18,
+                    symbol_name="pair",
+                    type="pair"
+                }
+            },
+            parent_pointer=userdata: 0x7fffa2ee2660,
+            self_pointer=userdata: 0x7fffa2ee26f0,
+            sibling_index=0,
+            start_point={column=4, row=1},
+            symbol_id=17,
+            symbol_name="object",
+            type="object"
+        }
+    },
+    parent_pointer=userdata: 0x7fffa2ee2730,
+    self_pointer=userdata: 0x7fffa2ee27c0,
     sibling_index=0,
     start_point={column=4, row=1},
     symbol_id=15,
@@ -285,38 +139,6 @@ test.lua:511: expected: 1, actual: {
     type="document"
 }
 stack traceback:
-	test.lua:511: in upvalue 'Test_constants.test_gr'
+	test.lua:490: in upvalue 'Test_constants.test_gr'
 
-2) Test_constants.test_symbols
-test.lua:517: expected: 1, actual: {
-    {name="end", type="auxiliary"},
-    {name="{", type="anonymous"},
-    {name=",", type="anonymous"},
-    {name="}", type="anonymous"},
-    {name=":", type="anonymous"},
-    {name="[", type="anonymous"},
-    {name="]", type="anonymous"},
-    {name='"', type="anonymous"},
-    {name="string_content_token1", type="auxiliary"},
-    {name="escape_sequence", type="regular"},
-    {name="number", type="regular"},
-    {name="true", type="regular"},
-    {name="false", type="regular"},
-    {name="null", type="regular"},
-    {name="comment", type="regular"},
-    {name="document", type="regular"},
-    {name="_value", type="auxiliary"},
-    {name="object", type="regular"},
-    {name="pair", type="regular"},
-    {name="array", type="regular"},
-    {name="string", type="regular"},
-    {name="string_content", type="regular"},
-    {name="document_repeat1", type="auxiliary"},
-    {name="object_repeat1", type="auxiliary"},
-    {name="array_repeat1", type="auxiliary"},
-    {name="string_content_repeat1", type="auxiliary"}
-}
-stack traceback:
-	test.lua:517: in upvalue 'Test_constants.test_symbols'
-
-Ran 2 tests in 2.706 seconds, 0 successes, 2 failures
+Ran 1 tests in 0.557 seconds, 0 successes, 1 failure

@@ -483,11 +483,38 @@ local flag, ast = treesitter.with_parser_do (
 assert (flag)
 
 
+local flag, symbols = treesitter.with_parser_do (
+    function (parser)
+        local set = treesitter.parser_set_language (parser, 'json')
+        assert (set, 'Cannot set the json language')
+
+        local f, symbols = treesitter.with_tree_do (
+            parser,
+            json,
+            function (tree)
+                local lang = treesitter.tree_language (tree)
+                return treesitter.language_symbols (lang)
+            end
+        )
+        assert (f)
+
+        return symbols
+    end
+)
+assert (flag)
+
+
 Test_constants = {}
 
 function Test_constants:test_gr ()
 	
 	lu.assertEquals(ast, 1)
+end
+
+
+function Test_constants:test_symbols ()
+	
+	lu.assertEquals(symbols, 1)
 end
 
 --------------------------------------------------------------------------------
