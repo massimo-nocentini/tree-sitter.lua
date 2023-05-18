@@ -464,7 +464,7 @@ print ( one)
 
 json = [[
 
-    { "hello": [ 42, 1.618 ]}
+    { "hello": [ 42, 1.618, "world" ]}
 
 ]]
 
