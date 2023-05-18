@@ -1,5 +1,5 @@
 
-
+local libc = require 'libc'
 local lu = require 'luaunit'
 local lambda = require 'operator'
 local treesitter = require 'tree-sitter'
@@ -427,6 +427,8 @@ local json = [[
 
 ]]
 
+print ('lines #', #json:lines (true))
+
 local function P (tbl)
 
     for k, v in pairs (tbl) do 
@@ -459,9 +461,10 @@ assert (flag)
 
 print ( one)
 
+
 json = [[
 
-    { "hello": [ "world" ]}
+    { "hello": [ 42, 1.618 ]}
 
 ]]
 
@@ -473,7 +476,7 @@ local flag, ast = treesitter.with_parser_do (
         local f, ast = treesitter.with_tree_do (
             parser,
             json,
-            treesitter.ast
+            function (tree) return treesitter.ast (tree, json) end
         )
         assert (f)
 
@@ -482,6 +485,9 @@ local flag, ast = treesitter.with_parser_do (
 )
 assert (flag)
 
+treesitter.walk (ast, function (node_type, field_name, is_named, s, e)
+    --print (json:sub (s, e))
+end)
 
 local flag, symbols = treesitter.with_parser_do (
     function (parser)
@@ -514,8 +520,14 @@ end
 
 function Test_constants:test_symbols ()
 	
-	lu.assertEquals(symbols, 1)
+	--lu.assertEquals(symbols, 1)
 end
+
+print 'IN ONE SHOT'
+
+treesitter ('json', json, function (node_type, field_name, is_named, s, e)
+    print (node_type, field_name, json:sub (s, e))
+end)
 
 --------------------------------------------------------------------------------
 

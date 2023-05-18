@@ -1,22 +1,46 @@
+lines #	420
 (document (object (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content)))))))) (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (array (object (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (string (string_content)))))) (pair key: (string (string_content)) value: (number)) (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (null)) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))) (pair key: (string (string_content)) value: (object (pair key: (string (string_content)) value: (string (string_content))) (pair key: (string (string_content)) value: (string (string_content))))))))))))
-FF
+IN ONE SHOT
+document		{ "hello": [ 42, 1.618 ]}
+
+
+object	nil	{ "hello": [ 42, 1.618 ]}
+{	nil	{
+pair	nil	"hello": [ 42, 1.618 ]
+string	key	"hello"
+"	nil	"
+string_content	nil	hello
+"	nil	"
+:	nil	:
+array	value	[ 42, 1.618 ]
+[	nil	[
+number	nil	42
+,	nil	,
+number	nil	1.618
+]	nil	]
+}	nil	}
+F.
 Failed tests:
 -------------
 1) Test_constants.test_gr
-test.lua:511: expected: 1, actual: {
+test.lua:517: expected: 1, actual: {
+    absolute_start_end_pair={5, 32},
     children={
         {
+            absolute_start_end_pair={5, 30},
             children={
                 {
+                    absolute_start_end_pair={5, 6},
                     children={},
+                    content="{",
                     end_point={column=5, row=1},
                     has_error=false,
                     is_extra=false,
                     is_missing=false,
                     is_named=false,
                     is_null=false,
-                    parent_pointer=userdata: 0x7ffd74c5d580,
-                    self_pointer=userdata: 0x7ffd74c5d610,
+                    parent_pointer=userdata: 0x7ffef3f8b1a0,
+                    self_pointer=userdata: 0x7ffef3f8b230,
                     sibling_index=0,
                     start_point={column=4, row=1},
                     symbol_id=1,
@@ -24,19 +48,23 @@ test.lua:511: expected: 1, actual: {
                     type="{"
                 },
                 {
+                    absolute_start_end_pair={7, 29},
                     children={
                         {
+                            absolute_start_end_pair={7, 14},
                             children={
                                 {
+                                    absolute_start_end_pair={7, 8},
                                     children={},
+                                    content='"',
                                     end_point={column=7, row=1},
                                     has_error=false,
                                     is_extra=false,
                                     is_missing=false,
                                     is_named=false,
                                     is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
+                                    parent_pointer=userdata: 0x7ffef3f8afe0,
+                                    self_pointer=userdata: 0x7ffef3f8b070,
                                     sibling_index=0,
                                     start_point={column=6, row=1},
                                     symbol_id=7,
@@ -44,15 +72,17 @@ test.lua:511: expected: 1, actual: {
                                     type='"'
                                 },
                                 {
+                                    absolute_start_end_pair={8, 13},
                                     children={},
+                                    content="hello",
                                     end_point={column=12, row=1},
                                     has_error=false,
                                     is_extra=false,
                                     is_missing=false,
                                     is_named=true,
                                     is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
+                                    parent_pointer=userdata: 0x7ffef3f8afe0,
+                                    self_pointer=userdata: 0x7ffef3f8b070,
                                     sibling_index=1,
                                     start_point={column=7, row=1},
                                     symbol_id=21,
@@ -60,15 +90,17 @@ test.lua:511: expected: 1, actual: {
                                     type="string_content"
                                 },
                                 {
+                                    absolute_start_end_pair={13, 14},
                                     children={},
+                                    content='"',
                                     end_point={column=13, row=1},
                                     has_error=false,
                                     is_extra=false,
                                     is_missing=false,
                                     is_named=false,
                                     is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
+                                    parent_pointer=userdata: 0x7ffef3f8afe0,
+                                    self_pointer=userdata: 0x7ffef3f8b070,
                                     sibling_index=2,
                                     start_point={column=12, row=1},
                                     symbol_id=7,
@@ -76,6 +108,7 @@ test.lua:511: expected: 1, actual: {
                                     type='"'
                                 }
                             },
+                            content='"hello"',
                             end_point={column=13, row=1},
                             field_name="key",
                             has_error=false,
@@ -83,8 +116,8 @@ test.lua:511: expected: 1, actual: {
                             is_missing=false,
                             is_named=true,
                             is_null=false,
-                            parent_pointer=userdata: 0x7ffd74c5d4b0,
-                            self_pointer=userdata: 0x7ffd74c5d540,
+                            parent_pointer=userdata: 0x7ffef3f8b0c0,
+                            self_pointer=userdata: 0x7ffef3f8b150,
                             sibling_index=0,
                             start_point={column=6, row=1},
                             symbol_id=20,
@@ -92,15 +125,17 @@ test.lua:511: expected: 1, actual: {
                             type="string"
                         },
                         {
+                            absolute_start_end_pair={14, 15},
                             children={},
+                            content=":",
                             end_point={column=14, row=1},
                             has_error=false,
                             is_extra=false,
                             is_missing=false,
                             is_named=false,
                             is_null=false,
-                            parent_pointer=userdata: 0x7ffd74c5d4b0,
-                            self_pointer=userdata: 0x7ffd74c5d540,
+                            parent_pointer=userdata: 0x7ffef3f8b0c0,
+                            self_pointer=userdata: 0x7ffef3f8b150,
                             sibling_index=1,
                             start_point={column=13, row=1},
                             symbol_id=4,
@@ -108,17 +143,20 @@ test.lua:511: expected: 1, actual: {
                             type=":"
                         },
                         {
+                            absolute_start_end_pair={16, 29},
                             children={
                                 {
+                                    absolute_start_end_pair={16, 17},
                                     children={},
+                                    content="[",
                                     end_point={column=16, row=1},
                                     has_error=false,
                                     is_extra=false,
                                     is_missing=false,
                                     is_named=false,
                                     is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
+                                    parent_pointer=userdata: 0x7ffef3f8afe0,
+                                    self_pointer=userdata: 0x7ffef3f8b070,
                                     sibling_index=0,
                                     start_point={column=15, row=1},
                                     symbol_id=5,
@@ -126,96 +164,88 @@ test.lua:511: expected: 1, actual: {
                                     type="["
                                 },
                                 {
-                                    children={
-                                        {
-                                            children={},
-                                            end_point={column=18, row=1},
-                                            has_error=false,
-                                            is_extra=false,
-                                            is_missing=false,
-                                            is_named=false,
-                                            is_null=false,
-                                            parent_pointer=userdata: 0x7ffd74c5d310,
-                                            self_pointer=userdata: 0x7ffd74c5d3a0,
-                                            sibling_index=0,
-                                            start_point={column=17, row=1},
-                                            symbol_id=7,
-                                            symbol_name='"',
-                                            type='"'
-                                        },
-                                        {
-                                            children={},
-                                            end_point={column=23, row=1},
-                                            has_error=false,
-                                            is_extra=false,
-                                            is_missing=false,
-                                            is_named=true,
-                                            is_null=false,
-                                            parent_pointer=userdata: 0x7ffd74c5d310,
-                                            self_pointer=userdata: 0x7ffd74c5d3a0,
-                                            sibling_index=1,
-                                            start_point={column=18, row=1},
-                                            symbol_id=21,
-                                            symbol_name="string_content",
-                                            type="string_content"
-                                        },
-                                        {
-                                            children={},
-                                            end_point={column=24, row=1},
-                                            has_error=false,
-                                            is_extra=false,
-                                            is_missing=false,
-                                            is_named=false,
-                                            is_null=false,
-                                            parent_pointer=userdata: 0x7ffd74c5d310,
-                                            self_pointer=userdata: 0x7ffd74c5d3a0,
-                                            sibling_index=2,
-                                            start_point={column=23, row=1},
-                                            symbol_id=7,
-                                            symbol_name='"',
-                                            type='"'
-                                        }
-                                    },
-                                    end_point={column=24, row=1},
+                                    absolute_start_end_pair={18, 20},
+                                    children={},
+                                    content="42",
+                                    end_point={column=19, row=1},
                                     has_error=false,
                                     is_extra=false,
                                     is_missing=false,
                                     is_named=true,
                                     is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
+                                    parent_pointer=userdata: 0x7ffef3f8afe0,
+                                    self_pointer=userdata: 0x7ffef3f8b070,
                                     sibling_index=1,
                                     start_point={column=17, row=1},
-                                    symbol_id=20,
-                                    symbol_name="string",
-                                    type="string"
+                                    symbol_id=10,
+                                    symbol_name="number",
+                                    type="number"
                                 },
                                 {
+                                    absolute_start_end_pair={20, 21},
                                     children={},
-                                    end_point={column=26, row=1},
+                                    content=",",
+                                    end_point={column=20, row=1},
                                     has_error=false,
                                     is_extra=false,
                                     is_missing=false,
                                     is_named=false,
                                     is_null=false,
-                                    parent_pointer=userdata: 0x7ffd74c5d3e0,
-                                    self_pointer=userdata: 0x7ffd74c5d470,
+                                    parent_pointer=userdata: 0x7ffef3f8afe0,
+                                    self_pointer=userdata: 0x7ffef3f8b070,
                                     sibling_index=2,
-                                    start_point={column=25, row=1},
+                                    start_point={column=19, row=1},
+                                    symbol_id=2,
+                                    symbol_name=",",
+                                    type=","
+                                },
+                                {
+                                    absolute_start_end_pair={22, 27},
+                                    children={},
+                                    content="1.618",
+                                    end_point={column=26, row=1},
+                                    has_error=false,
+                                    is_extra=false,
+                                    is_missing=false,
+                                    is_named=true,
+                                    is_null=false,
+                                    parent_pointer=userdata: 0x7ffef3f8afe0,
+                                    self_pointer=userdata: 0x7ffef3f8b070,
+                                    sibling_index=3,
+                                    start_point={column=21, row=1},
+                                    symbol_id=10,
+                                    symbol_name="number",
+                                    type="number"
+                                },
+                                {
+                                    absolute_start_end_pair={28, 29},
+                                    children={},
+                                    content="]",
+                                    end_point={column=28, row=1},
+                                    has_error=false,
+                                    is_extra=false,
+                                    is_missing=false,
+                                    is_named=false,
+                                    is_null=false,
+                                    parent_pointer=userdata: 0x7ffef3f8afe0,
+                                    self_pointer=userdata: 0x7ffef3f8b070,
+                                    sibling_index=4,
+                                    start_point={column=27, row=1},
                                     symbol_id=6,
                                     symbol_name="]",
                                     type="]"
                                 }
                             },
-                            end_point={column=26, row=1},
+                            content="[ 42, 1.618 ]",
+                            end_point={column=28, row=1},
                             field_name="value",
                             has_error=false,
                             is_extra=false,
                             is_missing=false,
                             is_named=true,
                             is_null=false,
-                            parent_pointer=userdata: 0x7ffd74c5d4b0,
-                            self_pointer=userdata: 0x7ffd74c5d540,
+                            parent_pointer=userdata: 0x7ffef3f8b0c0,
+                            self_pointer=userdata: 0x7ffef3f8b150,
                             sibling_index=2,
                             start_point={column=15, row=1},
                             symbol_id=19,
@@ -223,14 +253,15 @@ test.lua:511: expected: 1, actual: {
                             type="array"
                         }
                     },
-                    end_point={column=26, row=1},
+                    content='"hello": [ 42, 1.618 ]',
+                    end_point={column=28, row=1},
                     has_error=false,
                     is_extra=false,
                     is_missing=false,
                     is_named=true,
                     is_null=false,
-                    parent_pointer=userdata: 0x7ffd74c5d580,
-                    self_pointer=userdata: 0x7ffd74c5d610,
+                    parent_pointer=userdata: 0x7ffef3f8b1a0,
+                    self_pointer=userdata: 0x7ffef3f8b230,
                     sibling_index=1,
                     start_point={column=6, row=1},
                     symbol_id=18,
@@ -238,30 +269,33 @@ test.lua:511: expected: 1, actual: {
                     type="pair"
                 },
                 {
+                    absolute_start_end_pair={29, 30},
                     children={},
-                    end_point={column=27, row=1},
+                    content="}",
+                    end_point={column=29, row=1},
                     has_error=false,
                     is_extra=false,
                     is_missing=false,
                     is_named=false,
                     is_null=false,
-                    parent_pointer=userdata: 0x7ffd74c5d580,
-                    self_pointer=userdata: 0x7ffd74c5d610,
+                    parent_pointer=userdata: 0x7ffef3f8b1a0,
+                    self_pointer=userdata: 0x7ffef3f8b230,
                     sibling_index=2,
-                    start_point={column=26, row=1},
+                    start_point={column=28, row=1},
                     symbol_id=3,
                     symbol_name="}",
                     type="}"
                 }
             },
-            end_point={column=27, row=1},
+            content='{ "hello": [ 42, 1.618 ]}',
+            end_point={column=29, row=1},
             has_error=false,
             is_extra=false,
             is_missing=false,
             is_named=true,
             is_null=false,
-            parent_pointer=userdata: 0x7ffd74c5d650,
-            self_pointer=userdata: 0x7ffd74c5d6e0,
+            parent_pointer=userdata: 0x7ffef3f8b280,
+            self_pointer=userdata: 0x7ffef3f8b310,
             sibling_index=0,
             start_point={column=4, row=1},
             symbol_id=17,
@@ -269,6 +303,9 @@ test.lua:511: expected: 1, actual: {
             type="object"
         }
     },
+    content='{ "hello": [ 42, 1.618 ]}
+
+',
     end_point={column=0, row=3},
     field_name="",
     has_error=false,
@@ -276,8 +313,8 @@ test.lua:511: expected: 1, actual: {
     is_missing=false,
     is_named=true,
     is_null=false,
-    parent_pointer=userdata: 0x7ffd74c5d720,
-    self_pointer=userdata: 0x7ffd74c5d7b0,
+    parent_pointer=userdata: 0x7ffef3f8b360,
+    self_pointer=userdata: 0x7ffef3f8b3f0,
     sibling_index=0,
     start_point={column=4, row=1},
     symbol_id=15,
@@ -285,38 +322,6 @@ test.lua:511: expected: 1, actual: {
     type="document"
 }
 stack traceback:
-	test.lua:511: in upvalue 'Test_constants.test_gr'
+	test.lua:517: in upvalue 'Test_constants.test_gr'
 
-2) Test_constants.test_symbols
-test.lua:517: expected: 1, actual: {
-    {name="end", type="auxiliary"},
-    {name="{", type="anonymous"},
-    {name=",", type="anonymous"},
-    {name="}", type="anonymous"},
-    {name=":", type="anonymous"},
-    {name="[", type="anonymous"},
-    {name="]", type="anonymous"},
-    {name='"', type="anonymous"},
-    {name="string_content_token1", type="auxiliary"},
-    {name="escape_sequence", type="regular"},
-    {name="number", type="regular"},
-    {name="true", type="regular"},
-    {name="false", type="regular"},
-    {name="null", type="regular"},
-    {name="comment", type="regular"},
-    {name="document", type="regular"},
-    {name="_value", type="auxiliary"},
-    {name="object", type="regular"},
-    {name="pair", type="regular"},
-    {name="array", type="regular"},
-    {name="string", type="regular"},
-    {name="string_content", type="regular"},
-    {name="document_repeat1", type="auxiliary"},
-    {name="object_repeat1", type="auxiliary"},
-    {name="array_repeat1", type="auxiliary"},
-    {name="string_content_repeat1", type="auxiliary"}
-}
-stack traceback:
-	test.lua:517: in upvalue 'Test_constants.test_symbols'
-
-Ran 2 tests in 2.706 seconds, 0 successes, 2 failures
+Ran 2 tests in 2.783 seconds, 1 success, 1 failure

@@ -11,7 +11,7 @@
 #include <tree_sitter/api.h>
 #include <tree_sitter/json.h>
 
-void walk(lua_State *L, const TSLanguage *lang, TSNode node, int node_pos, const char *field_name)
+void walk(lua_State *L, const char *src, const TSLanguage *lang, TSNode node, int node_pos, const char *field_name)
 {
     lua_newtable(L);
 
@@ -44,6 +44,29 @@ void walk(lua_State *L, const TSLanguage *lang, TSNode node, int node_pos, const
     const char *symbol_name = ts_language_symbol_name(lang, symbol_id);
     lua_pushstring(L, symbol_name);
     lua_setfield(L, -2, "symbol_name");
+
+    lua_geti(L, 3, start_point.row + 1);
+    lua_geti(L, 3, end_point.row + 1);
+    int start = lua_tointeger(L, -2) + start_point.column;
+    int end = lua_tointeger(L, -1) + end_point.column;
+    lua_pop(L, 2);
+
+    lua_newtable (L);
+    lua_pushinteger (L, start);
+    lua_seti (L, -2, 1);
+
+    lua_pushinteger (L, end);
+    lua_seti (L, -2, 2);
+
+    lua_setfield (L, -2, "absolute_start_end_pair");
+
+    int n = end - start;
+    char *token = (char *)malloc(sizeof(char) * n + 1);
+    strncpy(token, src + start, n);
+    token[n] = '\0';
+    lua_pushstring(L, token);
+    lua_setfield(L, -2, "content");
+    free(token);
 
     lua_newtable(L);
 
@@ -95,7 +118,7 @@ void walk(lua_State *L, const TSLanguage *lang, TSNode node, int node_pos, const
 
         const char *name = ts_node_field_name_for_child(node, i);
 
-        walk(L, lang, child, i, name);
+        walk(L, src, lang, child, i, name);
 
         lua_seti(L, -2, i + 1);
     }
@@ -170,12 +193,13 @@ int l_tree_language(lua_State *L)
 int l_ast(lua_State *L)
 {
     TSTree *tree = (TSTree *)lua_touserdata(L, 1);
+    const char *src = lua_tostring(L, 2);
 
     TSNode root_node = ts_tree_root_node(tree);
 
     const TSLanguage *lang = ts_tree_language(tree);
 
-    walk(L, lang, root_node, 0, "");
+    walk(L, src, lang, root_node, 0, "");
 
     return 1;
 }
