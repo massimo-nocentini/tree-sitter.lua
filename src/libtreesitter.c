@@ -9,7 +9,8 @@
 #include <time.h>
 #include <math.h>
 #include <tree_sitter/api.h>
-#include <tree_sitter/json.h>
+
+TSLanguage *tree_sitter_json();
 
 void walk(lua_State *L, const char *src, const TSLanguage *lang, TSNode node, int node_pos, const char *field_name)
 {
@@ -51,14 +52,14 @@ void walk(lua_State *L, const char *src, const TSLanguage *lang, TSNode node, in
     int end = lua_tointeger(L, -1) + end_point.column;
     lua_pop(L, 2);
 
-    lua_newtable (L);
-    lua_pushinteger (L, start);
-    lua_seti (L, -2, 1);
+    lua_newtable(L);
+    lua_pushinteger(L, start);
+    lua_seti(L, -2, 1);
 
-    lua_pushinteger (L, end);
-    lua_seti (L, -2, 2);
+    lua_pushinteger(L, end);
+    lua_seti(L, -2, 2);
 
-    lua_setfield (L, -2, "absolute_start_end_pair");
+    lua_setfield(L, -2, "absolute_start_end_pair");
 
     int n = end - start;
     char *token = (char *)malloc(sizeof(char) * n + 1);
@@ -295,6 +296,81 @@ int l_ts_node_string(lua_State *L)
     return 1;
 }
 
+int l_with_query_do(lua_State *L)
+{
+    TSTree *tree = (TSTree *)lua_touserdata(L, 1);
+    const char *query_source = lua_tostring(L, 2);
+
+    const TSLanguage *language = ts_tree_language(tree);
+
+    uint32_t error_offset;
+    TSQueryError error_type;
+
+    TSQuery *query = ts_query_new(
+        language,
+        query_source,
+        strlen(query_source),
+        &error_offset,
+        &error_type);
+
+    lua_pushlightuserdata(L, query);
+    lua_pushinteger(L, error_type);
+    lua_pushinteger(L, error_offset);
+
+    int retcode = lua_pcall(L, 3, LUA_MULTRET, 0);
+
+    ts_query_delete(query);
+
+    lua_pushboolean(L, retcode == LUA_OK);
+
+    int n = lua_gettop(L) - 2;
+
+    lua_rotate(L, -n, 1);
+
+    return n;
+}
+
+void add_language_json(lua_State *L)
+{
+
+    TSLanguage *lang = tree_sitter_json();
+
+    lua_newtable(L);
+
+    lua_pushlightuserdata(L, lang);
+    lua_setfield(L, -2, "handler");
+
+    FILE *fptr;
+
+    fptr = fopen("../tree-sitter-json/queries/highlights.scm", "r");
+
+    if (fptr != NULL)
+    {
+
+        char c;
+
+        luaL_Buffer b;
+        luaL_buffinit(L, &b);
+
+        while ((c = fgetc(fptr)) != EOF)
+        {
+            luaL_addchar(&b, c);
+        }
+
+        luaL_pushresult(&b);
+    }
+    else
+    {
+        lua_pushnil(L);
+    }
+
+    fclose(fptr);
+
+    lua_setfield(L, -2, "query_source");
+
+    lua_setfield(L, -2, "json");
+}
+
 static const struct luaL_Reg libtreesitter[] = {
     {"with_parser_do", l_with_parser_do},
     {"parser_set_language", l_parser_set_language},
@@ -304,11 +380,55 @@ static const struct luaL_Reg libtreesitter[] = {
     {"ast", l_ast},
     {"tree_language", l_tree_language},
     {"language_symbols", l_language_symbols},
+    {"with_query_do", l_with_query_do},
+
     {NULL, NULL} /* sentinel */
 };
+
+void languages_table(lua_State *L)
+{
+    lua_newtable(L);
+
+    add_language_json(L);
+
+    lua_setfield(L, -2, "languages");
+}
+
+void query_errors_enum(lua_State *L)
+{
+    lua_newtable(L);
+
+    lua_pushinteger(L, TSQueryErrorNone);
+    lua_setfield(L, -2, "none");
+
+    lua_pushinteger(L, TSQueryErrorSyntax);
+    lua_setfield(L, -2, "syntax");
+
+    lua_pushinteger(L, TSQueryErrorNodeType);
+    lua_setfield(L, -2, "node_type");
+
+    lua_pushinteger(L, TSQueryErrorField);
+    lua_setfield(L, -2, "field");
+
+    lua_pushinteger(L, TSQueryErrorCapture);
+    lua_setfield(L, -2, "capture");
+
+    lua_pushinteger(L, TSQueryErrorStructure);
+    lua_setfield(L, -2, "structure");
+
+    lua_pushinteger(L, TSQueryErrorLanguage);
+    lua_setfield(L, -2, "language");
+
+    lua_setfield(L, -2, "query_errors");
+}
 
 int luaopen_libtreesitter(lua_State *L)
 {
     luaL_newlib(L, libtreesitter);
+
+    languages_table(L);
+
+    query_errors_enum(L);
+
     return 1;
 }

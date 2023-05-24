@@ -510,6 +510,31 @@ local flag, symbols = treesitter.with_parser_do (
 assert (flag)
 
 
+local flag, o, t = treesitter.with_parser_do (
+    function (parser)
+        local set = treesitter.parser_set_language (parser, 'json')
+        assert (set, 'Cannot set the json language')
+
+        local f, q, o, t = treesitter.with_tree_do (
+            parser,
+            json,
+            function (tree)
+                return treesitter.with_query_do (
+                    tree, 
+                    treesitter.languages.json.query_source,
+                    function (query)
+                        return 10, 11
+                    end)
+            end
+        )
+        assert (f and q)
+
+        return o, t
+    end
+)
+
+assert (flag and o == 10 and t == 11)
+
 Test_constants = {}
 
 function Test_constants:test_gr ()
@@ -520,7 +545,7 @@ end
 
 function Test_constants:test_symbols ()
 	
-	--lu.assertEquals(symbols, 1)
+	lu.assertEquals(treesitter.languages.json, 1)
 end
 
 print 'IN ONE SHOT'
