@@ -366,7 +366,7 @@ void add_language_json(lua_State *L)
 
     fclose(fptr);
 
-    lua_setfield(L, -2, "query_source");
+    lua_setfield(L, -2, "query_highlights");
 
     lua_setfield(L, -2, "json");
 }

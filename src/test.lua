@@ -521,10 +521,11 @@ local flag, o, t = treesitter.with_parser_do (
             function (tree)
                 return treesitter.with_query_do (
                     tree, 
-                    treesitter.languages.json.query_source,
-                    function (query)
+                    treesitter.languages.json.query_highlights,
+                    function (query, error_id, offset)
                         return 10, 11
-                    end)
+                    end
+                )
             end
         )
         assert (f and q)
