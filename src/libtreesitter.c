@@ -10,6 +10,9 @@
 #include <math.h>
 #include <tree_sitter/api.h>
 
+// Use conditional compilation under Windows.
+#define HIGHLIGHTS_JSON_FILEPATH "/usr/local/share/lua/5.4/tree-sitter/highlights-json.scm"
+
 TSLanguage *tree_sitter_json();
 
 void walk(lua_State *L, const char *src, const TSLanguage *lang, TSNode node, int node_pos, const char *field_name)
@@ -342,7 +345,9 @@ void add_language_json(lua_State *L)
 
     FILE *fptr;
 
-    fptr = fopen("../tree-sitter-json/queries/highlights.scm", "r");
+    fptr = fopen(HIGHLIGHTS_JSON_FILEPATH, "r");
+
+    printf ("hello\n");
 
     if (fptr != NULL)
     {
@@ -361,7 +366,7 @@ void add_language_json(lua_State *L)
     }
     else
     {
-        lua_pushnil(L);
+        lua_pushstring(L, "");
     }
 
     fclose(fptr);
