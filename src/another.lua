@@ -511,11 +511,10 @@ treesitter.with_parser_do (
                         treesitter.with_query_cursor_do (
                             function (cursor)
                                 
-                                treesitter.with_query_matches_do (
+                                match = treesitter.with_query_matches_do (
                                     cursor, 
                                     query, 
-                                    tree,
-                                    lambda.table_insert (match)
+                                    tree
                                 )
                             end
                         )

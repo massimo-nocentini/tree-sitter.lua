@@ -347,57 +347,47 @@ int l_with_query_matches_do(lua_State *L)
     TSQueryCapture capture;
     int length;
 
+    int type;
+
+    lua_newtable(L);
+
     while (ts_query_cursor_next_match(cursor, &match))
     {
-        lua_pushvalue(L, 4); // replicate the given function.
-
-        lua_newtable(L);
-
-        lua_pushinteger(L, match.id);
-        lua_setfield(L, -2, "id");
-
-        lua_pushinteger(L, match.pattern_index);
-        lua_setfield(L, -2, "pattern_index");
-
-        lua_pushinteger(L, match.capture_count);
-        lua_setfield(L, -2, "capture_count");
-
-        lua_newtable(L);
-
         for (int i = 0; i < match.capture_count; i++)
         {
             capture = match.captures[i];
-
-            lua_newtable(L);
-
-            lua_pushinteger(L, capture.index);
-            lua_setfield(L, -2, "index");
 
             const char *capture_name = ts_query_capture_name_for_id(
                 query,
                 capture.index,
                 &length);
 
-            lua_pushstring(L, capture_name);
-            lua_setfield(L, -2, "capture_name");
+            type = lua_getfield(L, -1, capture_name);
 
-            // const char *string_value = ts_query_string_value_for_id(
-            //     query,
-            //     i,
-            //     &length);
+            if (type == LUA_TNIL)
+            {
+                lua_pop(L, 1);
+                lua_newtable(L);
+                lua_pushvalue(L, -1);
+                lua_setfield(L, -3, capture_name);
+            }
 
-            // lua_pushstring(L, string_value);
-            // lua_setfield(L, -2, "string_value");
+            lua_len(L, -1);
+            int i = lua_tointeger(L, -1);
+            lua_pop(L, 1);
+
+            lua_newtable(L);
+
+            lua_pushstring(L, ts_node_string(capture.node));
+            lua_setfield(L, -2, "node_string");
 
             lua_seti(L, -2, i + 1);
+
+            lua_pop(L, 1);
         }
-
-        lua_setfield(L, -2, "captures");
-
-        lua_call(L, 1, 0);
     }
 
-    return 0;
+    return 1;
 }
 
 int l_with_query_cursor_do(lua_State *L)
