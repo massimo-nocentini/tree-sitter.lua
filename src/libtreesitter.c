@@ -286,7 +286,7 @@ int l_tree_root_node(lua_State *L)
     return 1;
 }
 
-int l_ts_node_string(lua_State *L)
+int l_node_string(lua_State *L)
 {
     TSNode *root_node = (TSNode *)lua_touserdata(L, 1);
 
@@ -333,6 +333,90 @@ int l_with_query_do(lua_State *L)
     return n;
 }
 
+int l_with_query_matches_do(lua_State *L)
+{
+    TSQueryCursor *cursor = (TSQueryCursor *)lua_touserdata(L, 1);
+    TSQuery *query = (TSQuery *)lua_touserdata(L, 2);
+    TSTree *tree = (TSTree *)lua_touserdata(L, 3);
+
+    TSNode node = ts_tree_root_node(tree);
+
+    ts_query_cursor_exec(cursor, query, node);
+
+    TSQueryMatch match;
+    TSQueryCapture capture;
+    int length;
+
+    while (ts_query_cursor_next_match(cursor, &match))
+    {
+        lua_pushvalue(L, 4); // replicate the given function.
+
+        lua_newtable(L);
+
+        lua_pushinteger(L, match.id);
+        lua_setfield(L, -2, "id");
+
+        lua_pushinteger(L, match.pattern_index);
+        lua_setfield(L, -2, "pattern_index");
+
+        lua_pushinteger(L, match.capture_count);
+        lua_setfield(L, -2, "capture_count");
+
+        lua_newtable(L);
+
+        for (int i = 0; i < match.capture_count; i++)
+        {
+            capture = match.captures[i];
+
+            lua_newtable(L);
+
+            lua_pushinteger(L, capture.index);
+            lua_setfield(L, -2, "index");
+
+            const char *capture_name = ts_query_capture_name_for_id(
+                query,
+                capture.index,
+                &length);
+
+            lua_pushstring(L, capture_name);
+            lua_setfield(L, -2, "capture_name");
+
+            // const char *string_value = ts_query_string_value_for_id(
+            //     query,
+            //     i,
+            //     &length);
+
+            // lua_pushstring(L, string_value);
+            // lua_setfield(L, -2, "string_value");
+
+            lua_seti(L, -2, i + 1);
+        }
+
+        lua_setfield(L, -2, "captures");
+
+        lua_call(L, 1, 0);
+    }
+
+    return 0;
+}
+
+int l_with_query_cursor_do(lua_State *L)
+{
+    TSQueryCursor *cursor = ts_query_cursor_new();
+
+    lua_pushlightuserdata(L, cursor);
+
+    int retcode = lua_pcall(L, 1, LUA_MULTRET, 0);
+
+    ts_query_cursor_delete(cursor);
+
+    lua_pushboolean(L, retcode == LUA_OK);
+
+    lua_rotate(L, 1, 1);
+
+    return LUA_MULTRET;
+}
+
 void add_language_json(lua_State *L)
 {
 
@@ -346,8 +430,6 @@ void add_language_json(lua_State *L)
     FILE *fptr;
 
     fptr = fopen(HIGHLIGHTS_JSON_FILEPATH, "r");
-
-    printf ("hello\n");
 
     if (fptr != NULL)
     {
@@ -381,11 +463,13 @@ static const struct luaL_Reg libtreesitter[] = {
     {"parser_set_language", l_parser_set_language},
     {"with_tree_do", l_with_tree_do},
     {"tree_root_node", l_tree_root_node},
-    {"node_string", l_ts_node_string},
+    {"node_string", l_node_string},
     {"ast", l_ast},
     {"tree_language", l_tree_language},
     {"language_symbols", l_language_symbols},
     {"with_query_do", l_with_query_do},
+    {"with_query_cursor_do", l_with_query_cursor_do},
+    {"with_query_matches_do", l_with_query_matches_do},
 
     {NULL, NULL} /* sentinel */
 };
