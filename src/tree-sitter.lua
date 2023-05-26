@@ -21,7 +21,7 @@ function libtreesitter.walk (ast_tbl, w)
             n.type,
             n.field_name,
             n.is_named,
-            n.absolute_start_end_pair[1] + 1, 
+            n.absolute_start_end_pair[1] + 1,
             n.absolute_start_end_pair[2],
             n
         )

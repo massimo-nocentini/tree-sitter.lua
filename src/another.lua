@@ -490,31 +490,37 @@ json = [[
 
 ]]
 
-local match = {}
+local matches = {}
 
 treesitter.with_parser_do (
     function (parser)
-        local set = treesitter.parser_set_language (parser, 'json')
-        assert (set, 'Cannot set the json language')
+        
+        local assigned = treesitter.parser_set_language (
+                            parser, treesitter.languages.json.language_handler)
+        
+        assert (assigned, 'Cannot set the json language')
 
-        treesitter.with_tree_do (
-            parser,
-            json,
+        treesitter.with_tree_do (parser, json,
             function (tree)
-                treesitter.with_query_do (
-                    tree, 
-                    treesitter.languages.json.query_highlights,
+        
+                treesitter.with_query_do (tree, treesitter.languages.json.query_highlights,
                     function (query, error_id, offset)
                         
                         assert (error_id == treesitter.query_errors.none)
 
-                        treesitter.with_query_cursor_do (
-                            function (cursor)
+                        treesitter.with_tree_root_node_do (tree,
+                            function (root_node)
+
+                                treesitter.with_query_cursor_do (
+                                    function (cursor)
                                 
-                                match = treesitter.with_query_matches_do (
-                                    cursor, 
-                                    query, 
-                                    tree
+                                        matches = treesitter.query_matches (
+                                            cursor, 
+                                            query, 
+                                            root_node
+                                        )
+                                
+                                    end
                                 )
                             end
                         )
@@ -528,7 +534,7 @@ treesitter.with_parser_do (
 Test_constants = {}
 
 function Test_constants:test_gr ()	
-	lu.assertEquals(match, nil)
+	lu.assertEquals(matches, nil)
 end
 
 
