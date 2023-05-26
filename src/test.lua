@@ -441,15 +441,15 @@ end
 
 local flag, one = treesitter.with_parser_do (
     function (parser)
-        local set = treesitter.parser_set_language (parser, 'json')
+        local set = treesitter.parser_set_language (parser, treesitter.languages.json.language_handler)
         assert (set, 'Cannot set the json language')
 
-        local f, o = treesitter.with_tree_do (
+        local f, g, o = treesitter.with_tree_do (
             parser,
             json,
             function (tree)
-                local tree_root = treesitter.tree_root_node (tree)
-                return treesitter.node_string (tree_root)
+                treesitter.with_tree_root_node_do (tree,
+                    function (tree_root) return treesitter.node_string (tree_root) end)
             end
         )
         assert (f)
@@ -470,10 +470,10 @@ json = [[
 
 local flag, ast = treesitter.with_parser_do (
     function (parser)
-        local set = treesitter.parser_set_language (parser, 'json')
+        local set = treesitter.parser_set_language (parser, treesitter.languages.json.language_handler)
         assert (set, 'Cannot set the json language')
 
-        local f, ast = treesitter.with_tree_do (
+        local f, lines, cum_lengths, ast = treesitter.with_tree_do (
             parser,
             json,
             function (tree) return treesitter.ast (tree, json) end
@@ -491,7 +491,7 @@ end)
 
 local flag, symbols = treesitter.with_parser_do (
     function (parser)
-        local set = treesitter.parser_set_language (parser, 'json')
+        local set = treesitter.parser_set_language (parser, treesitter.languages.json.language_handler)
         assert (set, 'Cannot set the json language')
 
         local f, symbols = treesitter.with_tree_do (
@@ -512,7 +512,7 @@ assert (flag)
 
 local flag, o, t = treesitter.with_parser_do (
     function (parser)
-        local set = treesitter.parser_set_language (parser, 'json')
+        local set = treesitter.parser_set_language (parser, treesitter.languages.json.language_handler)
         assert (set, 'Cannot set the json language')
 
         local f, q, o, t = treesitter.with_tree_do (
@@ -551,7 +551,7 @@ end
 
 print 'IN ONE SHOT'
 
-treesitter ('json', json, function (node_type, field_name, is_named, s, e)
+treesitter (treesitter.languages.json.language_handler, json, function (node_type, field_name, is_named, s, e)
     print (node_type, field_name, json:sub (s, e))
 end)
 

@@ -10,7 +10,15 @@ function libtreesitter.ast (tree, src)
     local lines = src:lines (true)
     local cum_lengths = table.scan (lines, function (acc, l) return 1 + #l + acc end, 0)
 
-    return ast (tree, src, cum_lengths)
+    return lines, cum_lengths, ast (tree, src, cum_lengths)
+end
+
+function libtreesitter.with_tree_and_ast_do (parser, src, recv_f)
+
+    return libtreesitter.with_tree_do (parser, src,
+        function (tree) return recv_f (tree, libtreesitter.ast (tree, src)) end
+    )
+
 end
 
 function libtreesitter.walk (ast_tbl, w)
@@ -44,7 +52,7 @@ local function all_in_one_shot (lang, src, f)
                 parser,
                 src,
                 function (tree) 
-                    local ast = libtreesitter.ast (tree, src)
+                    local lines, cum_lengths, ast = libtreesitter.ast (tree, src)
                     return libtreesitter.walk (ast, f)
                 end
             )
