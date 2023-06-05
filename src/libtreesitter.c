@@ -326,7 +326,10 @@ int l_query_matches(lua_State *L)
 
     TSQueryMatch match;
     TSQueryCapture capture;
-    int length, len;
+    TSNode captured_node;
+    TSPoint point;
+    int len;
+    uint32_t length;
 
     int type;
 
@@ -337,6 +340,8 @@ int l_query_matches(lua_State *L)
         for (int i = 0; i < match.capture_count; i++)
         {
             capture = match.captures[i];
+
+            captured_node = capture.node;
 
             const char *capture_name = ts_query_capture_name_for_id(
                 query,
@@ -359,8 +364,32 @@ int l_query_matches(lua_State *L)
 
             lua_newtable(L);
 
-            lua_pushstring(L, ts_node_string(capture.node));
+            lua_pushstring(L, ts_node_string(captured_node));
             lua_setfield(L, -2, "node_string");
+
+            point = ts_node_start_point(captured_node);
+
+            lua_createtable(L, 0, 2);
+
+            lua_pushinteger(L, point.row + 1);
+            lua_setfield(L, -2, "row");
+
+            lua_pushinteger(L, point.column + 1);
+            lua_setfield(L, -2, "column");
+
+            lua_setfield(L, -2, "start_point");
+
+            point = ts_node_end_point(captured_node);
+
+            lua_createtable(L, 0, 2);
+
+            lua_pushinteger(L, point.row + 1);
+            lua_setfield(L, -2, "row");
+
+            lua_pushinteger(L, point.column);
+            lua_setfield(L, -2, "column");
+
+            lua_setfield(L, -2, "end_point");
 
             // const char *str_value = ts_query_string_value_for_id(
             //     query,

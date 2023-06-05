@@ -13,6 +13,14 @@ function libtreesitter.ast (tree, src)
     return lines, cum_lengths, ast (tree, src, cum_lengths)
 end
 
+function libtreesitter.absolute_coord_mapper (src)
+
+    local lines = src:lines (true)
+    local cum_lengths = table.scan (lines, function (acc, l) return 1 + #l + acc end, 0)
+
+    return function (ts_point) return cum_lengths[ts_point.row] + ts_point.column end
+end
+
 function libtreesitter.with_tree_and_ast_do (parser, src, recv_f)
 
     return libtreesitter.with_tree_do (parser, src,
@@ -39,6 +47,54 @@ function libtreesitter.walk (ast_tbl, w)
 
     return W (ast_tbl)
 
+end
+
+function libtreesitter.highlights_matches (language_def, src)
+    return libtreesitter.easy_query_matches (language_def.language_handler, src, language_def.query_highlights)
+end
+
+function libtreesitter.easy_query_matches (language_handler, src, query_src)
+    local matches
+
+    libtreesitter.with_parser_do (
+        function (parser)
+            
+            local assigned = libtreesitter.parser_set_language (parser, language_handler)
+            
+            assert (assigned, 'Cannot set the json language')
+
+            libtreesitter.with_tree_do (parser, src,
+                function (tree)
+            
+                    libtreesitter.with_query_do (tree, query_src,
+                        function (query, error_id, offset)
+                            
+                            assert (error_id == libtreesitter.query_errors.none)
+
+                            libtreesitter.with_tree_root_node_do (tree,
+                                function (root_node)
+
+                                    libtreesitter.with_query_cursor_do (
+                                        function (cursor)
+                                    
+                                            matches = libtreesitter.query_matches (
+                                                cursor, 
+                                                query, 
+                                                root_node
+                                            )
+                                    
+                                        end
+                                    )
+                                end
+                            )
+                        end
+                    )
+                end
+            )
+        end
+    )
+
+    return matches
 end
 
 local function all_in_one_shot (lang, src, f)

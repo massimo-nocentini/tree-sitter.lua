@@ -490,46 +490,24 @@ json = [[
 
 ]]
 
-local matches = {}
 
-treesitter.with_parser_do (
-    function (parser)
-        
-        local assigned = treesitter.parser_set_language (
-                            parser, treesitter.languages.json.language_handler)
-        
-        assert (assigned, 'Cannot set the json language')
+local matches = treesitter.highlights_matches (treesitter.languages.json, json)
 
-        treesitter.with_tree_do (parser, json,
-            function (tree)
-        
-                treesitter.with_query_do (tree, treesitter.languages.json.query_highlights,
-                    function (query, error_id, offset)
-                        
-                        assert (error_id == treesitter.query_errors.none)
+local abs_coord = treesitter.absolute_coord_mapper (json)
 
-                        treesitter.with_tree_root_node_do (tree,
-                            function (root_node)
+for k, captures in pairs (matches) do
 
-                                treesitter.with_query_cursor_do (
-                                    function (cursor)
-                                
-                                        matches = treesitter.query_matches (
-                                            cursor, 
-                                            query, 
-                                            root_node
-                                        )
-                                
-                                    end
-                                )
-                            end
-                        )
-                    end
-                )
-            end
-        )
+    for _, c in pairs (captures) do
+
+        c.absolute = {
+            from = abs_coord (c.start_point),
+            to = abs_coord (c.end_point)
+        }
+        c.capture = string.sub (json, c.absolute.from, c.absolute.to)
+
     end
-)
+
+end
 
 Test_constants = {}
 
