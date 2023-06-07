@@ -322,6 +322,9 @@ int l_query_matches(lua_State *L)
     TSQuery *query = (TSQuery *)lua_touserdata(L, 2);
     TSNode *node = (TSNode *)lua_touserdata(L, 3);
 
+    int abs_coord_func_index = 4;
+    luaL_argexpected(L, lua_type(L, abs_coord_func_index) == LUA_TFUNCTION, abs_coord_func_index, "function");
+
     ts_query_cursor_exec(cursor, query, *node);
 
     TSQueryMatch match;
@@ -331,7 +334,7 @@ int l_query_matches(lua_State *L)
     int len;
     uint32_t length;
 
-    int type;
+    int type, row, column;
 
     lua_newtable(L);
 
@@ -364,17 +367,16 @@ int l_query_matches(lua_State *L)
 
             lua_newtable(L);
 
-            lua_pushstring(L, ts_node_string(captured_node));
-            lua_setfield(L, -2, "node_string");
-
             point = ts_node_start_point(captured_node);
 
             lua_createtable(L, 0, 2);
 
-            lua_pushinteger(L, point.row + 1);
+            row = point.row + 1;
+            lua_pushinteger(L, row);
             lua_setfield(L, -2, "row");
 
-            lua_pushinteger(L, point.column + 1);
+            column = point.column + 1;
+            lua_pushinteger(L, column);
             lua_setfield(L, -2, "column");
 
             lua_setfield(L, -2, "start_point");
@@ -383,13 +385,31 @@ int l_query_matches(lua_State *L)
 
             lua_createtable(L, 0, 2);
 
-            lua_pushinteger(L, point.row + 1);
+            row = point.row + 1;
+            lua_pushinteger(L, row);
             lua_setfield(L, -2, "row");
 
-            lua_pushinteger(L, point.column);
+            column = point.column;
+            lua_pushinteger(L, column);
             lua_setfield(L, -2, "column");
 
             lua_setfield(L, -2, "end_point");
+
+            lua_createtable(L, 0, 2); // for the absolute coordinates.
+
+            lua_pushvalue(L, abs_coord_func_index);
+            lua_getfield(L, -3, "start_point");
+            lua_call(L, 1, 1);
+
+            lua_setfield(L, -2, "from");
+
+            lua_pushvalue(L, abs_coord_func_index);
+            lua_getfield(L, -3, "end_point");
+            lua_call(L, 1, 1);
+
+            lua_setfield(L, -2, "to");
+
+            lua_setfield(L, -2, "absolute");
 
             // const char *str_value = ts_query_string_value_for_id(
             //     query,

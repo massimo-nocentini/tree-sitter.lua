@@ -490,24 +490,7 @@ json = [[
 
 ]]
 
-
-local matches = treesitter.highlights_matches (treesitter.languages.json, json)
-
-local abs_coord = treesitter.absolute_coord_mapper (json)
-
-for k, captures in pairs (matches) do
-
-    for _, c in pairs (captures) do
-
-        c.absolute = {
-            from = abs_coord (c.start_point),
-            to = abs_coord (c.end_point)
-        }
-        c.capture = string.sub (json, c.absolute.from, c.absolute.to)
-
-    end
-
-end
+local matches = treesitter.highlights_matches ('json', json)
 
 Test_constants = {}
 

@@ -3,6 +3,18 @@ local libc = require 'libc'
 local lambda = require 'operator'
 local libtreesitter = require 'libtreesitter'
 
+libtreesitter.languages.json.query_highlights = libtreesitter.languages.json.query_highlights .. [[
+
+"{" @opening.brace
+
+"}" @closing.brace
+
+"[" @opening.squaredb
+
+"]" @closing.squaredb
+
+]] 
+
 local ast = libtreesitter.ast    -- take a reference to the original function.
 
 function libtreesitter.ast (tree, src)
@@ -49,11 +61,16 @@ function libtreesitter.walk (ast_tbl, w)
 
 end
 
-function libtreesitter.highlights_matches (language_def, src)
+function libtreesitter.highlights_matches (lang_name, src)
+    local language_def = libtreesitter.languages[lang_name]
+
+    if not language_def then return nil end  -- early stopping.
+
     return libtreesitter.easy_query_matches (language_def.language_handler, src, language_def.query_highlights)
 end
 
 function libtreesitter.easy_query_matches (language_handler, src, query_src)
+    
     local matches
 
     libtreesitter.with_parser_do (
@@ -80,7 +97,8 @@ function libtreesitter.easy_query_matches (language_handler, src, query_src)
                                             matches = libtreesitter.query_matches (
                                                 cursor, 
                                                 query, 
-                                                root_node
+                                                root_node,
+                                                libtreesitter.absolute_coord_mapper (src)
                                             )
                                     
                                         end
@@ -94,7 +112,7 @@ function libtreesitter.easy_query_matches (language_handler, src, query_src)
         end
     )
 
-    return matches
+    return matches, src:lines(true)
 end
 
 local function all_in_one_shot (lang, src, f)
