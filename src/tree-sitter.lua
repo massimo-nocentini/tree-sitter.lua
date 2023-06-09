@@ -15,6 +15,15 @@ libtreesitter.languages.json.query_highlights = libtreesitter.languages.json.que
 
 ]] 
 
+
+libtreesitter.languages.c.query_highlights = libtreesitter.languages.c.query_highlights .. [[
+
+(function_declarator
+  declarator: (identifier) @function.decl)
+
+]]
+
+
 local ast = libtreesitter.ast    -- take a reference to the original function.
 
 function libtreesitter.ast (tree, src)
