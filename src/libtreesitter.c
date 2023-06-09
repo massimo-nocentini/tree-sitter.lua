@@ -12,8 +12,10 @@
 
 // Use conditional compilation under Windows.
 #define HIGHLIGHTS_JSON_FILEPATH "/usr/local/share/lua/5.4/tree-sitter/highlights-json.scm"
+#define HIGHLIGHTS_C_FILEPATH "/usr/local/share/lua/5.4/tree-sitter/highlights-c.scm"
 
 TSLanguage *tree_sitter_json();
+TSLanguage *tree_sitter_c();
 
 void walk(lua_State *L, const char *src, const TSLanguage *lang, TSNode node, int node_pos, const char *field_name)
 {
@@ -486,6 +488,47 @@ void add_language_json(lua_State *L)
     lua_setfield(L, -2, "json");
 }
 
+void add_language_c(lua_State *L)
+{
+
+    TSLanguage *lang = tree_sitter_c();
+
+    lua_newtable(L);
+
+    lua_pushlightuserdata(L, lang);
+    lua_setfield(L, -2, "language_handler");
+
+    FILE *fptr;
+
+    fptr = fopen(HIGHLIGHTS_C_FILEPATH, "r");
+
+    if (fptr != NULL)
+    {
+
+        char c;
+
+        luaL_Buffer b;
+        luaL_buffinit(L, &b);
+
+        while ((c = fgetc(fptr)) != EOF)
+        {
+            luaL_addchar(&b, c);
+        }
+
+        luaL_pushresult(&b);
+    }
+    else
+    {
+        lua_pushstring(L, "");
+    }
+
+    fclose(fptr);
+
+    lua_setfield(L, -2, "query_highlights");
+
+    lua_setfield(L, -2, "c");
+}
+
 static const struct luaL_Reg libtreesitter[] = {
     {"with_parser_do", l_with_parser_do},
     {"parser_set_language", l_parser_set_language},
@@ -507,6 +550,7 @@ void languages_table(lua_State *L)
     lua_newtable(L);
 
     add_language_json(L);
+    add_language_c(L);
 
     lua_setfield(L, -2, "languages");
 }
