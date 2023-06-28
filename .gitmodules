@@ -7,3 +7,6 @@
 [submodule "tree-sitter-sql"]
 	path = tree-sitter-sql
 	url = git@github.com:m-novikov/tree-sitter-sql.git
+[submodule "tree-sitter-lua"]
+	path = tree-sitter-lua
+	url = git@github.com:MunifTanjim/tree-sitter-lua.git
